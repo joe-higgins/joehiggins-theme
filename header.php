@@ -16,13 +16,25 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+		<!-- Copied from joehiggins.me static site -->
+		<meta property="og:title" content="Joe Higgins - Web Designer and Developer" />
+		<meta property="og:url" content="http://www.joehiggins.me" />
+		<meta property="og:image" content="http://www.joehiggins.me/images/joehiggins.png" />
+		<link rel="icon"
+		      type="image/png"
+		      href="images/logo2.png">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'joehiggins' ); ?></a>
+<!-- =============== FROM joehiggins.me STATIC index.html============  -->
+
+<!-- ============= end STATIC html ============= -->
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -44,7 +56,7 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation w3-bar">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joehiggins' ); ?></button>
 			<?php
 			wp_nav_menu( array(
