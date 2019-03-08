@@ -75,6 +75,10 @@ body, html {
 .logo  {
   width: 50px;
 }
+.jh-logo {
+  background: center/25% no-repeat url("images/logo2.png");
+  right: 10px;
+}
 .middle  {
 
   text-align: center;
@@ -102,11 +106,26 @@ body, html {
    float: right;
    padding-right: 30px;
 }
+.dashicons-before::before, .fa::before{
+  margin: 2px 6px 0 0;
+	float: left;
+}
+/* moves navbar down when admin bar is there */
+.admin-bar .w3-top {
+  top: 32px;
+}
+.main-navigation {
+  margin-top: 64px;
+}
 .w3-bar  {
   background-color: white;
 }
+.w3-bar .w3-bar-item {
+  width: 10em;
+}
 .w3-bar-item {
   /* color: #000; */
+
   background-color: transparent;
 }
 

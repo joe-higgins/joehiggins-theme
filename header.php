@@ -30,35 +30,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'joehiggins' ); ?></a>
 
-
-<!-- ============= end STATIC html ============= -->
-
 	<header id="masthead" class="site-header">
+		<nav id="site-navigation" class="main-navigation w3-bar">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joehiggins' ); ?></button>
+			<?php
+			wp_nav_menu( array(
+				'menu'            => '',
+        'container'       => 'div',
+        'container_class' => 'w3-top',
+        'container_id'    => '',
+				'theme-location'=> 'top-menu',
+				'menu_id'       => 'top-menu',
+				'menu_class'		=> 'w3-bar',
+				'menu-id'				=> 'myNavBar',
+				'link_before'		=> '',
+				'fallback_cb'     => 'wp_page_menu',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'add_li_class'	=> 'w3-bar-item'
 
-<!-- =============== FROM joehiggins.me STATIC index.html============  -->
-		  <div class="w3-bar" id="myNavbar">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'top-menu',
-					'container-class'	=> ''
+
 			) );
-				?>
-		    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-		      <i class="fa fa-bars"></i>
-		    </a>
-		    <a href="#home" class="w3-bar-item w3-button">HOME</a>
-		    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-		    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
-		    <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-eye"></i> RESUM&Eacute;</a>
-		    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-		    <a href="#home" class="w3-bar-item w3-right"><img class="logo" src="images/logo2.svg" alt=""></a>
-		  </div>
-<!-- ============= end STATIC html ============= -->
-
+			?>
+		</nav><!-- #site-navigation -->
 
 		<div class="site-branding">
 			<?php
@@ -79,15 +75,6 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation w3-bar">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'joehiggins' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
