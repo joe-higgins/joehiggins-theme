@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Joe Higgins</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Joe Hoggins - Web Designer and Developer" />
+<meta property="og:url" content="http://www.joehiggins.me" />
+<meta property="og:image" content="http://www.joehiggins.me/images/joehiggins.png" />
+<link rel="icon"
+      type="image/png"
+      href="images/logo2.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-eye"></i> RESUM&Eacute;</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#home" class="w3-bar-item w3-right"><img class="logo" src="images/logo2.svg" alt=""></a>
+    <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a> -->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#resume" class="w3-bar-item w3-button" onclick="toggleFunction()">RESUM&Eacute;</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-topright jh-topright" style="white-space:nowrap;">
+    <!-- <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> -->
+    <p class="w3-xxxlarge w3-animate-opacity jh-text-color">Joe Higgins</p><p class="w3-xlarge w3-animate-opacity jh-text-color">Web Designer/Developer</p>
+
+      <!-- MY <span class="w3-hide-small">WEBSITE</span> LOGO</span> -->
+
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <!-- <p class="w3-center"><em>I love coding and designing</em></p> -->
+  <p>I have speant much of my life as aprofessional classical, theater and jazz musician.  About 10 years ago I started teaching myself coding for web development.  During my college years I had a couple of programming courses in BASIC and Pascal so I wasn't completely lost when I started learning HTML and CSS.  I started hand coding web sites for my friends and family and eventually began building bigger sites in Joomla CMS and Wordpress and honing my PHP and JavaScript skills.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <!-- <p><b><i class="fa fa-user w3-margin-right"></i>Joe Higgins</b></p><br> -->
+      <img src="images/headshot.jpg" class="w3-round w3-image w3-opacity-min w3-hover-opacity-off" alt="Photo of Me" width="300" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>My training as a classical musician demands perseverance, intense focus, attention to detail, independence and flexibility.  All these skills translate perfectly into web design, development and coding.  I am constantly expanding my skills as I take on new projects and always welcome the opportunity to learn new technologies to add to my skill set.</p>
+    </div>
+  </div>
+  <!-- <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div> -->
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+
+  <div class="w3-quarter  w3-section">
+    <a href="https://www.linkedin.com/in/joe-higgins-73700b66/" target="_blank"><i class="fab fa-linkedin w3-hover-opacity jh-icon"></i></a>
+
+    <!-- <i class="fab fa-css3 jh-icon"></i> -->
+    <!-- <span class="w3-xlarge">89+</span><br>
+    Happy Clients -->
+  </div>
+  <div class="w3-quarter  w3-section">
+    <a href="https://www.facebook.com/silveroakwebdesign/" target="_blank"><i class="fab fa-facebook w3-hover-opacity jh-icon"></i></a>
+    <!-- <i class="fab fa-html5 jh-icon"></i> -->
+    <!-- <span class="w3-xlarge">150+</span><br>
+    Meetings -->
+  </div>
+  <div class="w3-quarter  w3-section">
+    <a href="https://codepen.io/joehiggins/" target="_blank"><i class="fab fa-codepen w3-hover-opacity jh-icon"></i></a>
+    <!-- <i class="fab fa-joomla jh-icon"></i> -->
+    <!-- <span class="w3-xlarge">&f2b9</span><br>
+    Projects Done -->
+  </div>
+  <div class="w3-quarter w3-section">
+    <a href="https://github.com/joe-higgins" target="_blank"><i class="fab fa-github w3-hover-opacity jh-icon"></i></a>
+    <!-- <i class="fab fa-html5 jh-icon"></i> -->
+    <!-- <span class="w3-xlarge">150+</span><br>
+    Meetings -->
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge jh-text-color w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here are some of my pojects.<br> Click on the images to make them bigger</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+
+    <div class="container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/ts1.png" class="w3-hover-opacity jh-image" alt="Travel Sommelier.com">
+      </div>
+      <div class="flip-card-back">
+        <h1>Travel Sommelier</h1>
+        <p>Custom wp theme. Visual design by Navarro Designs</p>
+        <a href="http://www.travelsommelier.com" target="_blank"><p>See live site</p></a>
+      </div>
+     </div>
+    </div>
+<!--    end card -->
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>John Doe</h1>
+        <p>Architect & Engineer</p>
+        <p>We love that guy</p>
+      </div>
+     </div>
+    </div>
+<!--    end card -->
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>John Doe</h1>
+        <p>Architect & Engineer</p>
+        <p>We love that guy</p>
+      </div>
+     </div>
+    </div>
+<!--    end card -->
+   <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+      </div>
+      <div class="flip-card-back">
+        <h1>John Doe</h1>
+        <p>Architect & Engineer</p>
+        <p>We love that guy</p>
+      </div>
+     </div>
+    </div>
+<!--    end card -->
+   </div>
+<!--    end container -->
+
+    <!-- <div class="w3-col m3">
+      <img src="images/ts1.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.travelsommelier.com' target='_blank'>Travel Sommelier</a>">
+    </div> -->
+    <!-- <div class="w3-col m3">
+      <img src="images/travelWithPurpose.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.travelsommelier.com/travel-with-purpose' target='_blank'>Travel with Purpose</a>">
+    </div> -->
+    <!-- <div class="w3-col m3">
+      <img src="images/mediaethics.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.mediaethicsmagazine.com' target='_blank'>Media Ethics Magazine</a>">
+    </div> -->
+    <!-- <div class="w3-col m3">
+      <img src="images/neads.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.neads.org' target='_blank'>National Education for Assistance Dog Services</a>">
+    </div> -->
+    <div class="w3-col m4">
+      <img src="images/ptech.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://silveroakdesign.com/ptech-wp/' target='_blank'>pTech Percussion Technologies</a>">
+    </div>
+  </div>
+  <!-- end row -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m4">
+      <img src="images/gpl.png" onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.gleasonlibrary.org/' target='_blank'>The Gleason Public Library</a>">
+    </div>
+    <div class="w3-col m4">
+      <img src="images/janelabanz.png"  onclick="onClick(this)" class="w3-hover-opacity jh-image" alt="Live site: <a href='http://www.janelabanz.com' target='_blank'>Jane Labanz</a>">
+    </div>
+  </div>
+  <!-- end row -->
+
+  <hr>
+  <h4 class="">Other Projects</h4>
+  <div class="w3-row-padding">
+    I am currently working on a very simplified custom framework to assist in quick site development without the need for an enormous framework like Bootstrap.
+  </div>
+
+  <!-- <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div> -->
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">See more at <a href="http://www.silveroakdesign.com/sod2017/portfolio.php" target="_blank">Silver Oak Design</a></button>
+  </div>
+<!-- end row -->
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image" src="" alt="modal">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge jh-text-color w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">Silver Oak Design</h3>
+  <h6 class="w3-center">Milton, MA</h6>
+  <!-- <p class="w3-center"><em>I'd love your feedback!</em></p> -->
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Greater Boston Area, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 617-281-6136<br>
+        <!--  <a href="mailto:joe@silveroakdesign.com">Email: joe@silveroakdesign.com</><br> -->
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          <!-- Begin Email Cloaking -->
+            <script language='javascript' type='text/javascript'><!--
+            //
+            // Anti-Spam Email Cloaking 3.0 by David Tulga
+            // http://www.davidtulga.com/antispamemail.htm
+            //
+            x = '&#64;';
+            eml = '&#106;&#111;&#101;' + x + '&#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109;';
+            msg = '&#69;&#109;&#97;&#105;&#108;&#58;&#32;&#106;&#111;&#101;' + x + '&#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109;';
+            out = '<a class="cloak_eml" href="mailto:' + eml + '">' + msg + '</a>';
+            document.write(out);
+            // -->
+            </script>
+            <noscript>
+            <!-- This message is displayed if the browser has javascript disabled. -->
+            &#69;&#109;&#97;&#105;&#108;&#58;&#32;&#106;&#111;&#101; (at) &#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109; [ &#106;&#111;&#101; (at) &#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109; ]
+            </noscript>
+            <!-- End Email Cloaking -->
+        <br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <!-- <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form> -->
+    </div>
+  </div>
+</div>
+
+<!-- parallax 4  -->
+<!-- Resume -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge jh-text-color w3-wide">RESUM&Eacute;</span>
+  </div>
+</div>
+<div class="w3-container w3-padding-64" id="resume">
+
+  <div class="wrapper w3-container">
+    <div class="middle"><h2 class="red">Joe Higgins</h2><h4>Web Designer and Front End Developer</h4></div>
+    <div class="middle">
+      <!-- Begin Email Cloaking -->
+        <script language='javascript' type='text/javascript'><!--
+        //
+        // Anti-Spam Email Cloaking 3.0 by David Tulga
+        // http://www.davidtulga.com/antispamemail.htm
+        //
+        x = '&#64;';
+        eml = '&#106;&#111;&#101;' + x + '&#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109;';
+        msg = '&#69;&#109;&#97;&#105;&#108;&#58;&#32;&#106;&#111;&#101;' + x + '&#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109;';
+        out = '<a class="cloak_eml" href="mailto:' + eml + '">' + msg + '</a>';
+        document.write(out);
+        // -->
+        </script>
+        <noscript>
+        <!-- This message is displayed if the browser has javascript disabled. -->
+        &#69;&#109;&#97;&#105;&#108;&#58;&#32;&#106;&#111;&#101; (at) &#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109; [ &#106;&#111;&#101; (at) &#115;&#105;&#108;&#118;&#101;&#114;&#111;&#97;&#107;&#100;&#101;&#115;&#105;&#103;&#110;&#46;&#99;&#111;&#109; ]
+        </noscript>
+        <!-- End Email Cloaking -->
+    </div>
+    <div class="middle"><h6>617-281-6136  || <a href="http://www.silveroakdesign.com" target="_blank">Silver Oak Design</a></h6></div>
+
+    <div class="w3-col w3-col l8">
+      <h3 class="red">Profile</h3>
+      <p>Experienced web design and development professional proficient in web standards, cross browser testing, content management systems and relevant web site development tools.</p>
+      <p>Enthusiastic, personable team player who listens to others and is able to contribute creative timely solutions to complex problems.</p>
+      <p>Self starter who is adept at working independently with minimal supervision, as well as contributing and collaborating as a productive team member.
+  </p>
+      <p>Highly effective verbal and written communicator.</p>
+      <p>Energetic, detail oriented contributor with demonstrable multi-tasking/organizational proficiency and a strong desire to learn.
+  </p>
+      <h3 class="red">Work History</h3>
+        <a href="http://www.silveroakdesign.com" target="_blank"><h4>Silver Oak Design</h4></a>
+          <h6>Owner</h6>
+          <ul>
+            <li>Develops web sites using HTML, CSS, JavaScript, jQuery, PHP, GIT and other technologies as needed.</li>
+            <li>Designs, implements and modifies database driven web sites with the Joomla and Wordpress Content Management Systems.</li>
+            <li>Creates web content using Adobe Creative Suite, GIMP, Inkscape.</li>
+            <li>Comfortable in both the Windows and Macintosh computing environments.</li>
+          </ul>
+          <a href="http://www.mediaethicsmagazine.com" target="_blank"><h4>Media Ethics Magazine</h4></a>
+            <h6>Developer/Webmaster</h6>
+            <ul>
+              <li>Created custom theme</li>
+              <li>Converted previous site data from .csv to MySQL DB</li>
+              <li>Ongoing maintenance and troubleshooting</li>
+              <li>Supervises and assists in publishing content.</li>
+            </ul>
+        <a href="http://www.josephhiggins.com" target="_blank"><h4>Professional Musician</h4></a>
+          <h6>Double Bass</h6>
+          <ul>
+            <li>Boston Pops Esplanade Orchestra, Boston Ballet Orchestra, Rhode Island Philharmonic Orchestra, North Shore Music Theater, American Repertory Theater, Providence Performing Arts Center.</li>
+
+          </ul>
+        <h4>New Hampshire Music Festival Orchestra Committee 2008-2010</h4>
+          <h6>Member 2008-2010</h6>
+          <ul>
+            <li>Organized the festival audience and community through the development of a CMS driven web site and social media resources.</li>
+            <li>Successfully used the community/orchestra partnership to save the New Hampshire Music Festival orchestra from dissolution.</li>
+
+          </ul>
+          <h4>Rhode Island Philharmonic Orchestra Committee, 2004-2007</h4>
+            <h6>Chairman, 2004-2007 </h6>
+            <ul>
+              <li>Managed and facilitated contract negotiations.</li>
+              <li>Supervised meetings with committee and orchestra at large.</li>
+              <li>Created website to facilitate communication with orchestra musicians.</li>
+            </ul>
+          <h4>MIT Libraries, Administrative Services </h4>
+             <h6>Mailroom Staff, 1992 - 1998</h6>
+             <ul>
+               <li>Responsible for sorting and delivery of mail and books to all of the libraries on the MIT campus.</li>
+             </ul>
+             <h4>MIT Libraries, Administrative Services</h4>
+             <h6>Support Staff, 1988 - 1992</h6>
+             <ul>
+               <li>In charge tracking orders and approving invoice payments for all MIT library book orders.</li>
+               <li>Maintained a spreadsheet in Lotus 123 for tracking of book orders and a file system for storage of all paid invoices.</li>
+               <li>Updating macro code for Lotus 123.</li>
+             </ul>
+             <h4>Various restaurants in Boston area</h4>
+             <h6>Chef, Line Cook</h6>
+             <ul>
+               <li>Ordering.</li>
+               <li>Managing staff.</li>
+               <li>Managing service.</li>
+             </ul>
+             <!--
+             <h4>Job 3</h4>
+             <h6>Title 3</h6>
+             <ul>
+               <li>Resposibility</li>
+               <li>Resposibility</li>
+               <li>Resposibility</li>
+               <li>Resposibility</li>
+               <li>Resposibility</li>
+             </ul> -->
+      <h3 class="red">Key Competencies and Skills</h3>
+        <h4>Web development</h4>
+          <ul>
+            <li>Knowledge of HTML, CSS, JavaScript/jQuery, Wordpress, Joomla, PHP, Adobe Creative Suite, GIMP, InkScape, MAMP.</li>
+            <li>Strategically thinking through all parts of the design/implementation process.</li>
+            <li>Knowledge of international web standards and protocols.</li>
+          </ul>
+        <h4>Professional</h4>
+          <ul>
+            <li>Adaptable and able to quickly pick up new systems and technologies.</li>
+            <li>Able to prioritise tasks and organise workload.</li>
+            <li>Can manage multiple projects in a deadline-driven environment.</li>
+            <li>Analyze, research and solve complex problems.</li>
+          </ul>
+        <h4>Personal</h4>
+          <ul>
+            <li>Excellent communicator.</li>
+            <li>Creative thinker.</li>
+            <li>Detail oriented.</li>
+            <li>Self starter.</li>
+          </ul>
+      <h3 class="red">Education</h3>
+      <p>Bachelor of Music, New England Conservatory of Music, Boston, MA 1991.</p>
+      <p>Oberlin College, Conservatory of Music, Oberlin, OH 1982 - 1985.</p>
+      <p>Harvard Extension School, <em>Pascal</em> programming course.</p>
+      <p>Lowell Institute at MIT, <em>BASIC</em> programming course.</p>
+      <h3 class="red">References</h3>
+      <p>Available on request.</p>
+    </div>
+
+    <div class="w3-col w3-col l4">
+      <h3 class="red">Technologies</h3>
+      <p>HTML</p>
+      <p>CSS</p>
+      <p>JavaScript</p>
+      <p>GIT/GitHub</p>
+      <p>Wordpress Development</p>
+      <p>Joomla Development</p>
+      <p>Responsive Design</p>
+      <p>Adobe Creative Suite</p>
+      <h3 class="red">Career Statement</h3>
+      <p class="w3-panel jh-panel">As a trained classical musician and a web developer/designer I have become adept at interacting effectively with a wide variety of personalities, collaborating on projects, managing complex schedules and finding creative solutions to complex problems.  Both careers demand a high level of focus, attention to detail, independence and flexibility.  My web design business requires that I learn and implement new technologies as demanded by each project.  As a result I am continually expanding my skills for future projects. I welcome the opportunity to tackle new technological approaches and add them to my skill set.
+  </p>
+
+      <h3 class="red">Personal Qualities</h3>
+      <p>Detail oriented</p>
+      <p>Patient</p>
+      <p>Perserverant</p>
+      <p>Team player</p>
+      <p>Good listener</p>
+      <p>Creative</p>
+      <p>Self motivated</p>
+    </div>
+  </div>
+  <!-- end wrapper -->
+</div>
+<!-- end resume -->
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/silveroakwebdesign/" target="_blank"><i class="fab fa-facebook w3-hover-opacity"></i></a>
+    <a href="https://www.linkedin.com/in/joe-higgins-73700b66/" target="_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+    <a href="https://github.com/joe-higgins" target="_blank"><i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href="https://codepen.io/joehiggins/" target="_blank"><i class="fab fa-codepen w3-hover-opacity"></i></a>
+
+  </div>
+
+  <p>Created by <a href="https://www.silveroakdesign.com" title="Silver Oak Design" target="_blank" class="w3-hover-text-green">Silver Oak Design</a></p>
+</footer>
+
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(42.2590539, -71.0988937);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+// window.onscroll = function() {myFunction()};
+// function myFunction() {
+//     var navbar = document.getElementById("myNavbar");
+//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+//     } else {
+//         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+//     }
+// }
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQo1fGbO2QlE4z5XxsWSdf_CLV9bAPcAY&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
