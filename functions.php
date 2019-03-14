@@ -143,6 +143,71 @@ function joehiggins_scripts() {
 add_action( 'wp_enqueue_scripts', 'joehiggins_scripts' );
 
 /**
+* Add custom editable theme content
+*/
+function jch_add_parallax1($wp_customize) {
+	$wp_customize->add_section('parallax1-section', array(
+		'title'		=> 'First Parallax Section'
+	));
+	$wp_customize->add_setting('parallax1-owner', array(
+		'default'	=> 'Owner Name'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'parallax1-owner-control', array(
+		'label'			=> 'Owner Name',
+		'section' 	=>	'parallax1-section',
+		'settings'	=>	'parallax1-owner'
+	)));
+	$wp_customize->add_setting('parallax1-tagline', array(
+		'default'	=> 'Tag Line'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'parallax1-tagline-control', array(
+		'label'			=> 'Owner Name',
+		'section' 	=>	'parallax1-section',
+		'settings'	=>	'parallax1-tagline'
+	)));
+	$wp_customize->add_setting('parallax1-image', array(
+		'default'	=> 'Image'
+	));
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'parallax1-imagee-control', array(
+		'label'			=> 'Image',
+		'section' 	=>	'parallax1-section',
+		'settings'	=>	'parallax1-image',
+		'width'			=>	1200,
+		'flex_width'	=> true
+	)));
+
+}
+add_action('customize_register', 'jch_add_parallax1');
+
+function jch_parallax1_bg_image()
+{
+?>
+    <style type="text/css">
+        .bgimg-1 {
+            background-image: url('<?php echo wp_get_attachment_url(get_theme_mod( 'parallax1-image' ));?>');
+        }
+    </style>
+<?php
+}
+add_action( 'wp_head', 'jch_parallax1_bg_image');
+
+add_filter('jpeg_quality', function($arg){return 100;});
+
+$defaults = array(
+	'default-color'          => '',
+	'default-image'          => '',
+	'default-repeat'         => 'repeat',
+	'default-position-x'     => 'left',
+        'default-position-y'     => 'top',
+        'default-size'           => 'auto',
+	'default-attachment'     => 'scroll',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $defaults );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

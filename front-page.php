@@ -11,7 +11,8 @@ get_header();
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-topright jh-topright" style="white-space:nowrap;">
-    <p class="w3-xxxlarge w3-animate-opacity jh-text-color">Joe Higgins</p><p class="w3-xlarge w3-animate-opacity jh-text-color">Web Designer/Developer</p>
+    <p class="w3-xxxlarge w3-animate-opacity jh-text-color"><?php echo get_theme_mod('parallax1-owner'); ?></p>
+    <p class="w3-xlarge w3-animate-opacity jh-text-color"><?php echo get_theme_mod('parallax1-tagline'); ?></p>
   </div>
 </div>
 
