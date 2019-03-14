@@ -143,8 +143,36 @@ function joehiggins_scripts() {
 add_action( 'wp_enqueue_scripts', 'joehiggins_scripts' );
 
 /**
-* Add custom editable theme content
+*
+*  Retains jpeg quality on upload
 */
+add_filter('jpeg_quality', function($arg){return 100;});
+
+/**
+*
+*  Adds support for custom background images
+*/
+$defaults = array(
+	'default-color'          => '',
+	'default-image'          => '',
+	'default-repeat'         => 'repeat',
+	'default-position-x'     => 'left',
+        'default-position-y'     => 'top',
+        'default-size'           => 'auto',
+	'default-attachment'     => 'scroll',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $defaults );
+
+/**
+* ===========================================
+* Add custom editable theme content
+* ===========================================
+*/
+
+// first parallax has site branding and background image
 function jch_add_parallax1($wp_customize) {
 	$wp_customize->add_section('parallax1-section', array(
 		'title'		=> 'First Parallax Section'
@@ -161,15 +189,15 @@ function jch_add_parallax1($wp_customize) {
 		'default'	=> 'Tag Line'
 	));
 	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'parallax1-tagline-control', array(
-		'label'			=> 'Owner Name',
+		'label'			=> 'Tag line',
 		'section' 	=>	'parallax1-section',
 		'settings'	=>	'parallax1-tagline'
 	)));
 	$wp_customize->add_setting('parallax1-image', array(
 		'default'	=> 'Image'
 	));
-	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'parallax1-imagee-control', array(
-		'label'			=> 'Image',
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'parallax1-image-control', array(
+		'label'			=> 'Add parallax background image',
 		'section' 	=>	'parallax1-section',
 		'settings'	=>	'parallax1-image',
 		'width'			=>	1200,
@@ -191,21 +219,83 @@ function jch_parallax1_bg_image()
 }
 add_action( 'wp_head', 'jch_parallax1_bg_image');
 
-add_filter('jpeg_quality', function($arg){return 100;});
+// Second parallax has 1 text area and background image
+function jch_add_parallax2($wp_customize) {
+	$wp_customize->add_section('parallax2-section', array(
+		'title'		=> 'Second Parallax Section'
+	));
+	$wp_customize->add_setting('parallax2-text', array(
+		'default'	=> 'Display text'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'parallax2-text-control', array(
+		'label'			=> 'Display text',
+		'section' 	=>	'parallax2-section',
+		'settings'	=>	'parallax2-text'
+	)));
+	$wp_customize->add_setting('parallax2-image', array(
+		'default'	=> 'Image'
+	));
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'parallax1-imagee-control', array(
+		'label'			=> 'Add parallax background image',
+		'section' 	=>	'parallax2-section',
+		'settings'	=>	'parallax2-image',
+		'width'			=>	1200,
+		'flex_width'	=> true
+	)));
 
-$defaults = array(
-	'default-color'          => '',
-	'default-image'          => '',
-	'default-repeat'         => 'repeat',
-	'default-position-x'     => 'left',
-        'default-position-y'     => 'top',
-        'default-size'           => 'auto',
-	'default-attachment'     => 'scroll',
-	'wp-head-callback'       => '_custom_background_cb',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => ''
-);
-add_theme_support( 'custom-background', $defaults );
+}
+add_action('customize_register', 'jch_add_parallax2');
+
+function jch_parallax2_bg_image()
+{
+?>
+    <style type="text/css">
+        .bgimg-2 {
+            background-image: url('<?php echo wp_get_attachment_url(get_theme_mod( 'parallax2-image' ));?>');
+        }
+    </style>
+<?php
+}
+add_action( 'wp_head', 'jch_parallax2_bg_image');
+
+// Third parallax has background image with text area
+function jch_add_parallax3($wp_customize) {
+	$wp_customize->add_section('parallax3-section', array(
+		'title'		=> 'Third Parallax Section'
+	));
+	$wp_customize->add_setting('parallax3-text', array(
+		'default'	=> 'Display text'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'parallax3-text-control', array(
+		'label'		=> 'Display text',
+		'section'	=> 'parallax3-section',
+		'settings'=> 'parallax3-text'
+	)));
+	$wp_customize->add_setting('parallax3-image', array(
+		'default'	=> 'Image'
+	));
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'parallax3-image-control', array(
+		'label'			=> 'Add parallax background image',
+		'section' 	=>	'parallax3-section',
+		'settings'	=>	'parallax3-image',
+		'width'			=>	1200,
+		'flex_width'	=> true
+	)));
+
+}
+add_action('customize_register', 'jch_add_parallax3');
+
+function jch_parallax3_bg_image()
+{
+?>
+    <style type="text/css">
+        .bgimg-3 {
+            background-image: url('<?php echo wp_get_attachment_url(get_theme_mod( 'parallax3-image' ));?>');
+        }
+    </style>
+<?php
+}
+add_action( 'wp_head', 'jch_parallax3_bg_image');
 
 /**
  * Implement the Custom Header feature.

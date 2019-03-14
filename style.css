@@ -59,6 +59,9 @@ body, html {
 /* color: #511c29; redish*/
 /* color: #162047; blueish*/
 }
+.jh-headline{
+  text-transform: uppercase;
+}
 .jh-icon {
   font-size: 3em;
   color: #fdf5e7;
@@ -150,13 +153,13 @@ body, html {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url('images/parallax2.jpg');
+    /* background-image: url('images/parallax2.jpg'); */
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url('images/parallax3.jpg');
+    /* background-image: url('images/parallax3.jpg'); */
     min-height: 400px;
 }
 
