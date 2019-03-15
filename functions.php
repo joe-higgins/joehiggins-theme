@@ -219,6 +219,54 @@ function jch_parallax1_bg_image()
 }
 add_action( 'wp_head', 'jch_parallax1_bg_image');
 
+// About section heading, 2 text areas, image
+function jch_add_about($wp_customize) {
+	$wp_customize->add_section('about-section', array(
+		'title'		=> 'About Section'
+	));
+	$wp_customize->add_setting('about-heading', array(
+		'default'	=> 'Heading text'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'about-heading-control', array(
+		'label'			=> 'Heading text',
+		'section' 	=>	'about-section',
+		'settings'	=>	'about-heading'
+	)));
+	$wp_customize->add_setting('about-text1', array(
+		'default'	=> 'First text area'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'about-text1-control', array(
+		'label'			=> 'First text area',
+		'section' 	=>	'about-section',
+		'settings'	=>	'about-text1',
+		'type'			=> 	'textarea'
+	)));
+	$wp_customize->add_setting('about-text2', array(
+		'default'	=> 'Second text area'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'about-text2-control', array(
+		'label'			=> 'Second text area',
+		'section' 	=>	'about-section',
+		'settings'	=>	'about-text2',
+		'type'			=> 	'textarea'
+
+	)));
+	$wp_customize->add_setting('about-image', array(
+		'default'	=> 'Image'
+	));
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'about-image-control', array(
+		'label'			=> 'Add Owner image',
+		'section' 	=>	'about-section',
+		'settings'	=>	'about-image',
+		'width'			=>	3000,
+		'flex_width'	=> true,
+		'flex_height'	=> true
+	)));
+
+}
+add_action('customize_register', 'jch_add_about');
+
+
 // Second parallax has 1 text area and background image
 function jch_add_parallax2($wp_customize) {
 	$wp_customize->add_section('parallax2-section', array(

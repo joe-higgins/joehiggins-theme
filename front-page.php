@@ -27,7 +27,7 @@ get_header();
 <?php get_template_part('template-parts/portfolio'); ?>
 
 <!-- Third Parallax Image with text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge jh-text-color jh-headline w3-wide"><?php echo get_theme_mod('parallax3-text'); ?></span>
   </div>
@@ -36,7 +36,7 @@ get_header();
 <?php get_template_part('template-parts/other-projects'); ?>
 
 <!-- Fourth Parallax Image with Contact Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge jh-text-color w3-wide">CONTACT</span>
   </div>
@@ -45,7 +45,7 @@ get_header();
 <?php get_template_part('template-parts/contact'); ?>
 
 <!-- Fifth Parallax Image Resume text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min">
+<div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge jh-text-color w3-wide">RESUM&Eacute;</span>
   </div>

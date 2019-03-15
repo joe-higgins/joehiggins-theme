@@ -44,9 +44,9 @@ body, html {
 }
 /* Joe's style */
 
-/* .w3-bar {
-  background-color: rgba(255,56,63, 0.85);
-} */
+a:visited {
+    color: inherit;
+}
 .wrapper  {
   border: solid #777 1px;
   width: 90%;
@@ -168,7 +168,7 @@ body, html {
 
 @media only screen and (min-width: 601px) {
   .w3-col.m3, .w3-quarter {
-      height: 250px;
+      height: 42px;
   }
 }
 /* Turn off parallax scrolling for tablets and phones */
