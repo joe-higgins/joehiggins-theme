@@ -15,7 +15,7 @@
   <p><?php echo get_theme_mod('about-text1'); ?></p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="<?php echo wp_get_attachment_url(get_theme_mod('about-image')); ?>" class="w3-round w3-image" alt="Photo of Me" width="300" height="333">
+      <img src="<?php echo wp_get_attachment_url(get_theme_mod('about-image')); ?>" class="w3-round w3-image jh-owner-image" alt="Photo of Me" width="300" height="333">
     </div>
 
     <!-- Hide this text on small devices -->
@@ -34,6 +34,7 @@
     <!-- <span class="w3-xlarge">89+</span><br>
     Happy Clients -->
   </div>
+  <?php dynamic_sidebar( 'about_bottom_1' ); ?>
   <div class="w3-quarter  w3-section">
     <a href="https://www.facebook.com/silveroakwebdesign/" target="_blank"><i class="fab fa-facebook w3-hover-opacity jh-icon"></i></a>
     <!-- <i class="fab fa-html5 jh-icon"></i> -->

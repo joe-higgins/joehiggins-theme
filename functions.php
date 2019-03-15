@@ -108,7 +108,7 @@ function joehiggins_content_width() {
 add_action( 'after_setup_theme', 'joehiggins_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -124,6 +124,34 @@ function joehiggins_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'joehiggins_widgets_init' );
+
+function jh_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar 2', 'joehiggins' ),
+		'id'            => 'jh-sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'joehiggins' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'jh_widgets_init' );
+
+function about_bottom_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'About bottom sidebar',
+		'id'            => 'about_bottom_1',
+		'before_widget' => '<div class="about-bottom">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'about_bottom_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.
