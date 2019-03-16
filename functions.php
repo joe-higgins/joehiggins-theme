@@ -42,12 +42,11 @@ if ( ! function_exists( 'joehiggins_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'joehiggins' ),
-			'top-menu' => esc_html__('top-menu')
+			'menu-1' => esc_html__( 'Primary', 'joehiggins' )
 		) );
-		//Adds a option for cutom classes on li menu items
+		//Adds an option for cutom classes on li menu items
 		// Add class in wp_nav_menu array
 		function add_additional_class_on_li($classes, $item, $args) {
     if($args->add_li_class) {
@@ -372,6 +371,13 @@ function jch_parallax3_bg_image()
 <?php
 }
 add_action( 'wp_head', 'jch_parallax3_bg_image');
+
+// ===================================================
+// =========== Top Menu settings =====================
+// ===================================================
+register_nav_menus( array(
+	'top-menu' => esc_html__( 'Top Menu', 'top-menu' ) 
+) );
 
 /**
  * Implement the Custom Header feature.
