@@ -11,7 +11,7 @@
 
 <!-- About section -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center"><?php echo get_theme_mod('about-heading'); ?></h3>
+  <h3 class="w3-center jh-headline"><?php echo get_theme_mod('about-heading'); ?></h3>
   <p><?php echo get_theme_mod('about-text1'); ?></p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
