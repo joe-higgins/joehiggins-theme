@@ -43,7 +43,7 @@
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-eye"></i> RESUM&Eacute;</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#home" class="w3-bar-item w3-right"><img class="logo" src="images/logo2.svg" alt=""></a>
+    <a href="#home" class="w3-bar-item w3-right"><img class="logo" src="<?php echo wp_get_attachment_url(get_theme_mod('header-logo-image')); ?>" alt=""></a>
   </div>
 
   <!-- Navbar on small screens -->

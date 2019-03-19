@@ -199,6 +199,34 @@ add_theme_support( 'custom-background', $defaults );
 * ===========================================
 */
 
+// Logo in right side header
+function jch_header_logo($wp_customize) {
+	$wp_customize->add_section('header-logo-section', array(
+		'title'		=> 'Header Logo'
+	));
+	$wp_customize->add_setting('header-logo-owner', array(
+		'default'	=> 'Header logo'
+	));
+	$wp_customize->add_control(new WP_Customize_Control($wp_customize,'header-logo-control', array(
+		'label'			=> 'Header Logo',
+		'section' 	=>	'header-logo-section',
+		'settings'	=>	'header-logo-owner'
+	)));
+
+	$wp_customize->add_setting('header-logo-image', array(
+		'default'	=> 'Image'
+	));
+	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'header-logo-image-control', array(
+		'label'			=> 'Add header logo image',
+		'section' 	=>	'header-logo-section',
+		'settings'	=>	'header-logo-image',
+		'width'			=>	300,
+		'flex_width'	=> true
+	)));
+
+}
+add_action('customize_register', 'jch_header_logo');
+
 // first parallax has site branding and background image
 function jch_add_parallax1($wp_customize) {
 	$wp_customize->add_section('parallax1-section', array(
@@ -376,7 +404,7 @@ add_action( 'wp_head', 'jch_parallax3_bg_image');
 // =========== Top Menu settings =====================
 // ===================================================
 register_nav_menus( array(
-	'top-menu' => esc_html__( 'Top Menu', 'top-menu' ) 
+	'top-menu' => esc_html__( 'Top Menu', 'top-menu' )
 ) );
 
 /**
