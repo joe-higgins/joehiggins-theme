@@ -10,9 +10,10 @@
 ?>
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my pojects.<br> Click on the images to make them bigger</em></p><br>
+  <h3 class="w3-center jh-headline"><?php echo get_theme_mod('parallax2-heading'); ?></h3>
+  <p class="w3-center"><em><?php echo get_theme_mod('parallax2-tagline'); ?></em></p><br>
 
+   <?php dynamic_sidebar( 'jh-sidebar-2'); ?>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
 
