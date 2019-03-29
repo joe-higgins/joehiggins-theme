@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
+<!-- 3/29/19 This site should run Safe SVG plugin -->
 _s
 ===
 

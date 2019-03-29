@@ -76,7 +76,7 @@ function jch_header_logo($wp_customize) {
 		'default'	=> 'Image'
 	));
 	$wp_customize->add_control(new WP_Customize_Cropped_Image_Control($wp_customize,'header-logo-image-control', array(
-		'label'			=> 'Add header logo image',
+		'label'			=> 'Add header logo image - Please add "Safe SVG" plugin if using SVG images!',
 		'section' 	=>	'header-logo-section',
 		'settings'	=>	'header-logo-image',
 		'width'			=>	300,
