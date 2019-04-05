@@ -171,6 +171,14 @@ a:visited {
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
+/* ========= AOS extras ========= */
+body[data-aos-duration='5000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='5000'] {
+    transition-duration: 4000ms;
+  }
+
+/* ============================== */
+
 @media only screen and (min-width: 601px) {
   .w3-col.m3, .w3-quarter {
       height: 42px;
