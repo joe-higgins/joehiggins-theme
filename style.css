@@ -248,9 +248,13 @@ a:visited {
   font-size: 90%;
   width: 200px;
   height: 200px;
-}
+  }
   .flip-card h1{
     font-size: 1.4em;
+  }
+  .w3-bar .w3-bar-item {
+    width: 6em;
+    transition: 1.5s;
   }
 
 }
