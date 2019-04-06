@@ -194,12 +194,14 @@ $defaults = array(
 add_theme_support( 'custom-background', $defaults );
 
 // ===================================================
-// =========== Top Menu settings =====================
+// =========== Additional menu areas=====================
 // ===================================================
 register_nav_menus( array(
 	'top-menu' => esc_html__( 'Top Menu', 'top-menu' )
 ) );
-
+register_nav_menus( array(
+	'social-menu' => esc_html__( 'Social Menu', 'social-menu' )
+) );
 /**
  * Implement the Custom Header feature.
  */

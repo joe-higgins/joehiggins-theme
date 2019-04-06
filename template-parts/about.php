@@ -26,32 +26,19 @@
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-
+  <?php wp_nav_menu( array( 'theme_location' => 'social-menu' ) ); ?>
   <div class="w3-quarter  w3-section">
     <a href="https://www.linkedin.com/in/joe-higgins-73700b66/" target="_blank"><i class="fab fa-linkedin w3-hover-opacity jh-icon"></i></a>
-
-    <!-- <i class="fab fa-css3 jh-icon"></i> -->
-    <!-- <span class="w3-xlarge">89+</span><br>
-    Happy Clients -->
   </div>
   <?php dynamic_sidebar( 'about_bottom_1' ); ?>
   <div class="w3-quarter  w3-section">
     <a href="https://www.facebook.com/silveroakwebdesign/" target="_blank"><i class="fab fa-facebook w3-hover-opacity jh-icon"></i></a>
-    <!-- <i class="fab fa-html5 jh-icon"></i> -->
-    <!-- <span class="w3-xlarge">150+</span><br>
-    Meetings -->
   </div>
   <div class="w3-quarter  w3-section">
     <a href="https://codepen.io/joehiggins/" target="_blank"><i class="fab fa-codepen w3-hover-opacity jh-icon"></i></a>
-    <!-- <i class="fab fa-joomla jh-icon"></i> -->
-    <!-- <span class="w3-xlarge">&f2b9</span><br>
-    Projects Done -->
   </div>
   <div class="w3-quarter w3-section">
     <a href="https://github.com/joe-higgins" target="_blank"><i class="fab fa-github w3-hover-opacity jh-icon"></i></a>
-    <!-- <i class="fab fa-html5 jh-icon"></i> -->
-    <!-- <span class="w3-xlarge">150+</span><br>
-    Meetings -->
   </div>
 </div>
 <!-- END About section -->
